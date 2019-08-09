@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AudioFeature" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2L0-Eb-5Xy">
+                                <rect key="frame" x="164" y="310" width="46" height="48"/>
+                                <state key="normal" title="Button" image="Image"/>
+                                <connections>
+                                    <action selector="recordButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gMX-He-Vyr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wV3-VJ-PR5">
+                                <rect key="frame" x="65" y="400" width="26" height="30"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                <state key="normal" title="Button" image="play"/>
+                                <connections>
+                                    <action selector="playButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mfK-fa-E60"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="InK-Za-mah">
+                                <rect key="frame" x="97" y="401" width="229" height="31"/>
+                                <connections>
+                                    <action selector="changeAudiotime:" destination="BYZ-38-t0r" eventType="valueChanged" id="MnF-41-urH"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wV3-VJ-PR5" secondAttribute="bottom" constant="237" id="21v-aV-5v1"/>
+                            <constraint firstItem="2L0-Eb-5Xy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="290" id="BDP-Pn-iTW"/>
+                            <constraint firstItem="wV3-VJ-PR5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="Hq3-9a-ZON"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="InK-Za-mah" secondAttribute="trailing" constant="51" id="LyI-uh-jpE"/>
+                            <constraint firstItem="wV3-VJ-PR5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="380" id="YRo-g7-gQw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wV3-VJ-PR5" secondAttribute="trailing" constant="284" id="fHS-72-uGg"/>
+                            <constraint firstItem="InK-Za-mah" firstAttribute="leading" secondItem="wV3-VJ-PR5" secondAttribute="trailing" constant="8" id="hUh-AO-XPl"/>
+                            <constraint firstItem="InK-Za-mah" firstAttribute="top" secondItem="2L0-Eb-5Xy" secondAttribute="bottom" constant="43" id="hx3-Ny-hZo"/>
+                            <constraint firstItem="2L0-Eb-5Xy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="164" id="imq-ku-Lfa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2L0-Eb-5Xy" secondAttribute="trailing" constant="165" id="x9i-pu-i4N"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="AudioSlider" destination="InK-Za-mah" id="VhT-AY-0Rh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image" width="48" height="48"/>
+        <image name="play" width="24" height="24"/>
+    </resources>
+</document>
